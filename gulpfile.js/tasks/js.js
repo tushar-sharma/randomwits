@@ -72,12 +72,21 @@ const pageJs = () => {
   );
 };
 
+const miscJs = () => {
+  return concatJs([
+      `${JS_SRC}/commons/*.js`,
+      `${JS_SRC}/utils/locale-datetime.js`
+    ], 'misc'
+  );
+};
+
 // GA pageviews report
 const pvreportJs = () => {
   return concatJs(`${JS_SRC}/utils/pageviews.js`, 'pvreport');
 };
 
-const buildJs = parallel(commonsJs, homeJs, postJs, categoriesJs, pageJs, pvreportJs);
+const buildJs = parallel(
+  commonsJs, homeJs, postJs, categoriesJs, pageJs, miscJs, pvreportJs);
 
 exports.build = series(buildJs, minifyJs);
 
@@ -86,8 +95,7 @@ exports.liveRebuild = () => {
 
   watch([
       `${ JS_SRC }/commons/*.js`,
-      `${ JS_SRC }/utils/*.js`,
-      `${ JS_SRC }/lib/*.js`
+      `${ JS_SRC }/utils/*.js`
     ],
     buildJs
   );
