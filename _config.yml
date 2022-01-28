@@ -18,14 +18,13 @@ timezone: Asia/Shanghai
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Chirpy                          # the main title
+title: Randowits                          # the main title
 
-tagline: A text-focused Jekyll theme   # it will display as the sub-title
+tagline: Increasing entropy in the universe   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  A minimal, portfolio, sidebar,
-  bootstrap Jekyll theme with responsive web design
-  and focuses on text presentation.
+  My ramblings on tech, science,
+  politics, etc.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: ''
@@ -97,7 +96,7 @@ comments:
     repo:         # <gh-username>/<repo>
     issue_term:   # < url | pathname | title | ...>
 
-paginate: 10
+paginate: 3
 
 # ------------ The following options are not recommended to be modified ------------------
 
