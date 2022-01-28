@@ -52,6 +52,24 @@ layout: page
 
     <div class="post-content">
       <p>
+        <a href="{{ post.url }}">
+          <img src="{{ post.image.src }}" class="preview-img {{ bg | strip }}"
+          alt="{{ post.image.alt | default: "Preview Image" }}"
+
+          {% if page.image.width %}
+            width="{{ post.image.width }}"
+          {% elsif page.image.w %}
+            width="{{ post.image.w }}"
+          {% endif %}
+
+          {% if page.image.height %}
+            height="{{ post.image.height }}"
+          {% elsif page.image.h %}
+            height="{{ post.image.h }}"
+          {% endif %}>
+        </a>
+      </p>
+      <p>
         {% include no-linenos.html content=post.content %}
         {{ content | markdownify | strip_html | truncate: 200 | escape }}
       </p>
