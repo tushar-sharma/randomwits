@@ -30,7 +30,7 @@ description: >-                        # used by seo meta and the atom feed
   politics, etc.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: ''
+url: 'https://randomwits.com'
 
 github:
   username: tushar-sharma             # change to your github username
@@ -81,7 +81,7 @@ theme_mode:   # [light|dark]
 # will be added to all image (site avatar & posts' images) paths starting with '/'
 #
 # e.g. 'https://cdn.com'
-img_cdn: 'https://cdn.jsdelivr.net/gh/tushar-sharma/randomwits-images@e249c901e7e50cefbaab773dfa14bea861cf781d'
+img_cdn: 'https://cdn.jsdelivr.net/gh/tushar-sharma/randomwits-images'
 
 # the avatar on sidebar, support local or CORS resources
 avatar: '/commons/avatar.jpg'
