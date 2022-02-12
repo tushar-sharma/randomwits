@@ -43,7 +43,6 @@ The above command will:
 1. Removes some files or directories from your repository:
     - `.travis.yml`{: .filepath}
     - files under `_posts`{: .filepath}
-    - folder `docs`{: .filepath}
 
 2. If the option `--no-gh` is provided, the directory `.github`{: .filepath} will be deleted. Otherwise, set up the GitHub Action workflow by removing the extension `.hook`{: .filepath} of `.github/workflows/pages-deploy.yml.hook`{: .filepath}, and then remove the other files and directories in the folder `.github`{: .filepath}.
 
@@ -75,6 +74,12 @@ Update the variables of `_config.yml`{: .filepath} as needed. Some of them are t
 If you need to customize the stylesheet, copy the theme's `assets/css/style.scss`{: .filepath} to the same path on your Jekyll site, and then add the custom style at the end of the style file.
 
 Starting from [`v4.1.0`][chirpy-4.1.0], if you want to overwrite the SASS variables defined in `_sass/addon/variables.scss`{: .filepath}, create a new file `_sass/variables-hook.scss`{: .filepath} and assign new values to the target variable in it.
+
+### Customing Static Assets
+
+By default, the source of the static assets is defined by file `_data/assets/cross_origin.yml`{: .filepath }, and you can replace some of these CDNs according to the network conditions in the region where your website is published.
+
+Also, if you want to self-host the static assets, please refer to the [_chirpy-static-assets_](https://github.com/cotes2020/chirpy-static-assets#readme).
 
 ### Running Local Server
 
